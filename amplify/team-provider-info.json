@@ -9,7 +9,9 @@
       "UnauthRoleName": "amplify-ecommerceapp22s-dev-125956-unauthRole",
       "StackName": "amplify-ecommerceapp22s-dev-125956",
       "StackId": "arn:aws:cloudformation:us-east-1:133345511550:stack/amplify-ecommerceapp22s-dev-125956/af809100-c58a-11ec-9277-0e3a2d97838d",
-      "AmplifyAppId": "d2oxd49ydxji0h"
+      "AmplifyAppId": "d2oxd49ydxji0h",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-ecommerceapp22s-dev-125956-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-ecommerceapp22s-dev-125956-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
@@ -18,7 +20,13 @@
       },
       "function": {
         "ecommerceapp22s55326018PostConfirmation": {
-          "GROUP": "Admin"
+          "GROUP": "Admin",
+          "deploymentBucketName": "amplify-ecommerceapp22s-dev-125956-deployment",
+          "s3Key": "amplify-builds/ecommerceapp22s55326018PostConfirmation-4278396a596173706837-build.zip"
+        },
+        "ecommercefunction22s": {
+          "deploymentBucketName": "amplify-ecommerceapp22s-dev-125956-deployment",
+          "s3Key": "amplify-builds/ecommercefunction22s-2f5846392f5162634172-build.zip"
         }
       }
     }
