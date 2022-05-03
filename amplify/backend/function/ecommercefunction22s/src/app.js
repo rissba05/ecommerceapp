@@ -38,7 +38,7 @@ var userpoolId = process.env.AUTH_ECOMMERCEAPP22S55326018_USERPOOLID
 
 // DynamoDB configuration
 const region = process.env.REGION
-const ddb_table_name = process.env.STORAGE_PRODUCTTABLE_NAME
+const ddb_table_name = process.env.STORAGE_PRODUCTTABLE22S_NAME
 const docClient = new AWS.DynamoDB.DocumentClient({region})
 
 // declare a new express app

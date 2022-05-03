@@ -37,7 +37,7 @@ const Admin = () => {
 
       // Post to the API:
       await API.post(
-          'ecommerceapi'
+          'ecommerceapi22s'
           , '/products'
           , data
       );
