@@ -24,6 +24,7 @@ const Admin = () => {
 
   const addItem = async () => {
     try {
+        // Create the object to send with the request
       const data = {
         body: { 
             ...itemInfo
@@ -31,9 +32,10 @@ const Admin = () => {
         }
       };
 
-      // This clears the input form:
+      // This clears the input form by updating the local state:
       updateItemInfo(initialState);
 
+      // Post to the API:
       await API.post(
           'ecommerceapi'
           , '/products'
