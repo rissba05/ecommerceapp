@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { Authenticator } from '@aws-amplify/ui-react/legacy';
+import { Authenticator } from '@aws-amplify/ui-react';
 
 
 export const Profile = () => {
