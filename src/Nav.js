@@ -3,7 +3,7 @@ import React
         , useEffect 
     } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Menu } from 'antd';
 
 import { 
@@ -15,7 +15,14 @@ import {
 import { Hub } from 'aws-amplify';
 import { checkUser } from './checkUser';
 
-export const Nav = ({ current}) => {
+export const Nav = () => {
+
+    const loc = useLocation();
+    console.log(loc);
+    const splitLoc = loc.pathname.split("/");
+    console.log(splitLoc);
+    const key = splitLoc[1] && splitLoc[1].length > 0 ? splitLoc[1] : "home";
+    console.log(key);
 
   const [user, updateUser] = useState({})
 
@@ -42,7 +49,7 @@ export const Nav = ({ current}) => {
   return (
     <div>
       <Menu 
-        selectedKeys={[current]} 
+        selectedKeys={[key]} 
         mode="horizontal"
       >
         <Menu.Item 
